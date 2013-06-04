@@ -1,5 +1,10 @@
 /**
+ *      DESfire Card operating system's emulation. This class installs the applet
+ *      in the card and runs the OS reading APDU's and calling the required functions
+ *      depending on the INS field
  * 
+ *      @author WinXp
+ *
  */
 package des_client_1;
 
@@ -21,7 +26,13 @@ import javacard.security.RandomData;
 import javacardx.crypto.Cipher;
 
 /**
+ * This is code is based on the work of Jorge Prado Casanovas
+ * and Gauthier Van Damme. The original source code can be downloaded
+ * at the following address 
+ * http://code.google.com/p/java-card-desfire-emulation/
+ * 
  * @author Robert
+ * 
  *
  */
 public class DesfireCard extends Applet implements MultiSelectable{
@@ -347,7 +358,7 @@ final static  byte SECRET = 0x01;
 	 */
 	private void changeKeySettings(APDU apdu, byte[] buffer){
 		receiveAPDU(apdu, buffer);
-		//Hay que descifrar el campo de datos igual que con changeKey (no sé como)
+		//Hay que descifrar el campo de datos igual que con changeKey (no sï¿½ como)
 		//FALTA
 		if(((byte)(buffer[ISO7816.OFFSET_LC])!=8)&&((byte)(buffer[ISO7816.OFFSET_LC])!=16))ISOException.throwIt(Util.LENGTH_ERROR);
 		byte keySettings=buffer[ISO7816.OFFSET_CDATA];
@@ -415,7 +426,7 @@ final static  byte SECRET = 0x01;
 		byte[] AID = {buffer[ISO7816.OFFSET_CDATA],buffer[ISO7816.OFFSET_CDATA+1],buffer[ISO7816.OFFSET_CDATA+2]};
 		byte[] keySettings={buffer[ISO7816.OFFSET_CDATA+3],buffer[ISO7816.OFFSET_CDATA+4]};
 		
-		//Añadir el ISOFileID y el DF-Name  para compatibiliadad con 7816
+		//Aï¿½adir el ISOFileID y el DF-Name  para compatibiliadad con 7816
 		//FALTA
 		masterFile.addDF(AID,keySettings);
 		ISOException.throwIt(Util.OPERATION_OK);
@@ -473,7 +484,7 @@ final static  byte SECRET = 0x01;
 				response[(byte)(i+2)]=AID[2];
 			}
 //			ISOException.throwIt(response[3]);
-			//Habría que devolver STATUS WORD AF si hay más AID q enviar
+			//Habrï¿½a que devolver STATUS WORD AF si hay mï¿½s AID q enviar
 			sendResponse(apdu, buffer, response);
 		}
 		else{//Second part
@@ -1213,7 +1224,7 @@ final static  byte SECRET = 0x01;
 	 * 			Length.	Number of records to read
 	 */
 	
-	//USAR LOS NUEVOS METODOS IMPLEMENTADOS PARA REALIZARLO DE UNA MANERA MÁS ELEGANTE
+	//USAR LOS NUEVOS METODOS IMPLEMENTADOS PARA REALIZARLO DE UNA MANERA Mï¿½S ELEGANTE
 	private void readRecords(APDU apdu, byte[] buffer){
 		if(selectedDF.isMasterFile()==true)ISOException.throwIt(Util.PERMISSION_DENIED);
 		receiveAPDU(apdu, buffer);
