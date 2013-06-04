@@ -1,0 +1,10 @@
+#package specification
+#Tue Apr 02 12:50:34 GMT 2013
+masktools-version=1.1
+des_account.Des_accountClient-aid=F01020304011
+des_account-major=1
+des_account-aid=F010203040
+jcop-packages=des_account
+des_account-base=internal
+des_account-clazzes=des_account.Des_accountClient
+des_account-minor=0

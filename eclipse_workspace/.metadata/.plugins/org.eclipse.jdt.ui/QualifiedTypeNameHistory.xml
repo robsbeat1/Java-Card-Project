@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javacard.framework.ISO7816"/>
+<fullyQualifiedTypeName name="bank.wallet.Wallet"/>
+<fullyQualifiedTypeName name="javacard.framework.OwnerPIN"/>
+<fullyQualifiedTypeName name="javacard.framework.APDUException"/>
+<fullyQualifiedTypeName name="des_1.DesfireInterface"/>
+<fullyQualifiedTypeName name="account.AccountInterface"/>
+<fullyQualifiedTypeName name="javacard.framework.Shareable"/>
+<fullyQualifiedTypeName name="javacard.framework.AID"/>
+<fullyQualifiedTypeName name="account2.AccountInterface2"/>
+<fullyQualifiedTypeName name="javacard.framework.APDU"/>
+<fullyQualifiedTypeName name="javacard.framework.Util"/>
+<fullyQualifiedTypeName name="javacard.framework.JCSystem"/>
+<fullyQualifiedTypeName name="javacard.framework.ISOException"/>
+<fullyQualifiedTypeName name="des_server.Des_server"/>
+<fullyQualifiedTypeName name="des_server.Des_serverInterface"/>
+<fullyQualifiedTypeName name="des_1.Des_serverInterface"/>
+<fullyQualifiedTypeName name="des_server2.Util"/>
+<fullyQualifiedTypeName name="des_server2.ds2Interface"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,14 @@
+# /set-var path C:/software/eclipse_workspace/jcsh
+/mode echo=on
+/mode trace=on
+
+/echo ******
+/echo Descreas credit
+/echo ******
+
+# decrease 3€ i.e. 05 00 00 00
+/echo debit
+/send 90dc0000050100000001
+
+/echo get value
+/send 906c00000101

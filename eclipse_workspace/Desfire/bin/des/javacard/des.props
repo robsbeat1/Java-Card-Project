@@ -1,0 +1,10 @@
+#package specification
+#Thu Mar 28 18:31:38 GMT 2013
+des-clazzes=des.File des.StandartFile des.BackupFile des.CyclicRecord des.DesfireCard des.DirectoryFile des.IndexFile des.LinearRecord des.MasterFile des.Util des.Value des.ValueRecord
+masktools-version=1.1
+des-minor=0
+des-base=internal
+jcop-packages=des
+des.DesfireCard-aid=0102030405
+des-aid=0102030405060708090001
+des-major=1

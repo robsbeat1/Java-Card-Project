@@ -1,0 +1,32 @@
+/mode trace on
+
+/echo ***************************************
+/echo Sample script
+/echo 
+/echo Step 1: get balance
+/echo Step2: try to increase balance
+/echo ***************************************
+
+# reset the card and select the applet
+/atr
+
+# script variables 
+aid1=A000000000125602
+get_balance = A0500000
+add_credit = A0400000
+
+# Starting the command line with a "-" character allows to continue script execution in case of errors
+-/select ${aid1}
+if ${response} != '6A82' 
+   #  so check balance
+   /send ${get_balance}
+else
+   /echo "AID1 not found"
+end
+
+# try to add 500 to the balance i.e. 0x1F4 
+#-/send A04000000201F4
+-/send "${add_credit}0201F4"
+if ${resposne} = '6301'
+	# need to insert pin
+	/send 

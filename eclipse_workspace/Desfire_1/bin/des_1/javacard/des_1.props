@@ -1,0 +1,10 @@
+#package specification
+#Tue Apr 02 19:12:29 GMT 2013
+masktools-version=1.1
+des_1.DesfireCard-aid=0A0B0C0D0F01
+des_1-major=1
+des_1-clazzes=des_1.ds2Interface des_1.DesfireCard des_1.File des_1.DirectoryFile des_1.IndexFile des_1.MasterFile des_1.Util des_1.Value des_1.ValueRecord
+des_1-base=internal
+des_1-minor=0
+des_1-aid=0A0B0C0D0F00
+jcop-packages=des_1

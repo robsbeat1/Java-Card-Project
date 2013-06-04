@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session version="1.0">
+<refactoring comment="Rename type 'des_1.DesfireInterface' to 'Des_serverInterface'&#13;&#10;- Original element: 'des_1.DesfireInterface'&#13;&#10;- Renamed element: 'des_1.Des_serverInterface'&#13;&#10;- Update references to refactored element&#13;&#10;- Update textual occurrences in comments and strings" description="Rename type 'DesfireInterface'" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;des_1{DesfireInterface.java[DesfireInterface" matchStrategy="1" name="Des_serverInterface" qualified="false" references="true" similarDeclarations="false" stamp="1361454750376" textual="false" version="1.0"/>
+</session>

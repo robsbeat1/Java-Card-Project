@@ -1,0 +1,31 @@
+/mode echo on
+/mode trace on
+
+/echo ***************************************
+/echo Account test script
+/echo 
+/echo Test getbalance from jwallet applet 
+/echo ***************************************
+
+# reset the card and select the applet
+/atr
+# 
+aid1=A000000000125602
+aid2=A00000ABCD02
+
+get_balance = A0500000
+add_credit = A0400000
+
+# Starting the command line with a "-" character allows to continue script execution in case of errors
+-/select ${aid1}
+if ${response} != '6A82' 
+   # OK, account applet found, checking balance
+   /send A0500000
+end
+-/select ${aid2}
+f ${response} != '6A82' 
+   # OK, account applet found, checking balance
+   /send A0500000
+end
+/echo "If there is no error, SUCCESS"
+end

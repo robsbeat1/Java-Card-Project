@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="750"/>
+		<item key="height" value="550"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
+		<item key="updateSimilarElements" value="false"/>
+		<item key="patterns" value=""/>
+		<item key="deleteSubPackages" value="true"/>
+		<item key="renameSubpackages" value="false"/>
+		<item key="updateTextualMatches" value="false"/>
+		<item key="updateQualifiedNames" value="false"/>
+	</section>
+	<section name="InferTypeArguments">
+		<item key="assumeCloneReturnsSameType" value="true"/>
+		<item key="leaveUnconstrainedRaw" value="true"/>
+	</section>
+</section>
