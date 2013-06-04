@@ -26,7 +26,7 @@ import javacard.security.RandomData;
 import javacardx.crypto.Cipher;
 
 /**
- * This is code is based on the work of Jorge Prado Casanovas
+ * This code is based on the work of Jorge Prado Casanovas
  * and Gauthier Van Damme. The original source code can be downloaded
  * at the following address 
  * http://code.google.com/p/java-card-desfire-emulation/
