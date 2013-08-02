@@ -1,0 +1,10 @@
+#package specification
+#Sun Jun 30 23:20:58 GMT 2013
+masktools-version=1.1
+des_client_1.DesfireCard-aid=C01020304011
+des_client_1-major=1
+jcop-packages=des_client_1
+des_client_1-base=internal
+des_client_1-aid=C010203040
+des_client_1-clazzes=des_client_1.File des_client_1.StandartFile des_client_1.BackupFile des_client_1.CyclicRecord des_client_1.DesfireCard des_client_1.DirectoryFile des_client_1.IndexFile des_client_1.LinearRecord des_client_1.MasterFile des_client_1.Util des_client_1.Value des_client_1.ValueRecord
+des_client_1-minor=0

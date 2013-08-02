@@ -1,0 +1,10 @@
+#package specification
+#Sun Jun 30 22:18:23 GMT 2013
+des_client_2.Des_client_2-aid=D01020304011
+masktools-version=1.1
+des_client_2-minor=0
+des_client_2-aid=D010203040
+des_client_2-base=internal
+jcop-packages=des_client_2
+des_client_2-clazzes=des_client_2.Des_client_2
+des_client_2-major=1

@@ -1,0 +1,10 @@
+#package specification
+#Mon Jul 01 05:15:14 GMT 2013
+des_server2-base=internal
+masktools-version=1.1
+des_server2-clazzes=des_server2.ds2Interface des_server2.Des_Server2 des_server2.Log des_server2.Util des_server2.Value
+des_server2.Des_Server2-aid=B11020304011
+des_server2-major=1
+jcop-packages=des_server2
+des_server2-minor=0
+des_server2-aid=B110203040
