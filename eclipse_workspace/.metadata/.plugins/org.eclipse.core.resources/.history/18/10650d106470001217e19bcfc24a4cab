@@ -1,0 +1,105 @@
+package wallet;
+
+import javacard.framework.APDU;
+import javacard.framework.Applet;
+import javacard.framework.ISO7816;
+import javacard.framework.ISOException;
+import javacard.framework.OwnerPIN;
+
+public class Jwallet extends Applet {
+/****** Constat Declaration ****/
+	
+	// CLA byte in the command APDU 
+	final static byte Wallet_CLA = (byte) 0xB0;
+	
+	// INS byte in the command APDU
+	final static byte VERIFY = (byte) 0x20;
+	final static byte CREDIT = (byte) 0X30;
+	final static byte DEBIT = (byte) 0x40;
+	final static byte GET_BALANCE = (byte) 0x50;
+	
+	// max balance
+	final static short MAX_BALANCE = 0x7fff;
+	
+	// maximum transaction ammount
+	final static short MAX_AMOUNT = 127;
+	
+	// maximum number of incorrect trys befor the PIN is blocked
+	final static byte PIN_TRY_LIMIT = (byte) 0x04;
+	
+	// maximum lenght of PIN
+	final static byte PIN_SIZE = (byte) 0x04;
+	
+	// signal that the pin has failled
+	final static short SW_VERIFICATION_FAILED = 0X6300;
+	
+	// signal that the PIN validation is required
+	final static short SW_PIN_VERIFICATION_REQUIRED = 0X6301;
+	
+	// signal invalid transaction ammount
+	// invalid ammount if ammount > MAX_AMMOUNT
+	// or if ammound < 0
+	final static short SW_INVALID_AMOUNT = 0x6A83;
+	
+	// signal that the balance exceeds the maximum
+	final static short SW_EXCEED_MAXIMUM_BALANCE = 0x6A84;
+	
+	// signal the balance becomes negative
+	final static short SW_NEGATIVE_BALANCE = 0x6A85;
+	
+	/****** Instance Variable Declaration ****/
+	
+	// instance variables declaration
+	OwnerPIN pin;
+	short balance = 1000; // Starting balance of decimal 1000 is 3E8 in hex
+	
+	/**
+	 * install method
+	 */
+
+	public static void install(byte[] bArray, short bOffset, byte bLength) {
+		// GP-compliant JavaCard applet registration
+		new Jwallet(bArray, bOffset, bLength).register(bArray, (short) (bOffset + 1), bArray[bOffset]);
+	}
+
+	private Jwallet(byte[] bArray, short bOffset, byte bLength){
+		 
+		pin = new OwnerPIN(PIN_TRY_LIMIT, PIN_SIZE);
+		// bArray contains the default PIN initialization value (12345)
+		bArray[0] = 01;
+		bArray[1] = 02;
+		bArray[2] = 03;
+		bArray[3] = 04;
+		bArray[4] = 05;
+		bOffset = 0;
+		bLength = 5;
+ 
+		pin.update(bArray, bOffset, bLength);
+		// register the applet instance with the JCRE
+ 
+		register();
+	} // end of the constructor
+	
+	public void process(APDU apdu) {
+		// Good practice: Return 9000 on SELECT
+		if (selectingApplet()) {
+			return;
+		}
+
+		byte[] buf = apdu.getBuffer();
+		switch (buf[ISO7816.OFFSET_INS]) {
+		case GET_BALANCE : getBalance(apdu);
+		return;
+	case DEBIT : debit(apdu);
+		return;
+	case CREDIT: credit(apdu);
+		return;
+	case VERIFY: verify(apdu);
+		return;
+		default:
+			// good practice: If you don't know the INStruction, say so:
+			ISOException.throwIt(ISO7816.SW_INS_NOT_SUPPORTED);
+		}
+	}
+
+}

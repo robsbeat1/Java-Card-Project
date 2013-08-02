@@ -1,0 +1,10 @@
+#package specification
+#Tue Mar 19 23:57:42 GMT 2013
+masktools-version=1.1
+account.AccountApplet-aid=A000000000125602
+jcop-packages=account
+account-major=1
+account-aid=A0000000001256
+account-base=internal
+account-clazzes=account.AccountInterface account.AccountApplet
+account-minor=0

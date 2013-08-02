@@ -1,0 +1,10 @@
+#package specification
+#Tue Mar 19 23:57:47 GMT 2013
+masktools-version=1.1
+helloworld.Helloworld-aid=0102030405
+helloworld-aid=1234567890
+helloworld-major=1
+jcop-packages=helloworld
+helloworld-clazzes=helloworld.Helloworld
+helloworld-minor=0
+helloworld-base=internal

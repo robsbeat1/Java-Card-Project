@@ -1,0 +1,61 @@
+# /set-var path C:/software/eclipse_workspace/jcsh
+/mode echo=on
+/mode trace=on
+
+/echo ******
+/echo Creats application
+/echo Creats value file 
+/echo ******
+
+
+# reset the card and select the applet
+/atr
+# 
+aid1=0A0B0C0D0F01
+
+
+# Starting the command line with a "-" character allows to continue script execution in case of errors
+/select ${aid1}
+
+/echo select application
+-/send 905A000003000101
+if ${response} == '91A0'
+#application not present
+	# creat application
+	# CA = desfire comanda creat application
+	# 05 = length
+	# 000101 = 3 byte Application AID
+	# 0F = key setting i.e. no auth required
+	# 01 = number of keys = 1
+	/echo creat application
+	-/send 90CA000005000101FF01
+	if ${response} == '91DE'
+	   # Application already present
+	else
+	/echo select application
+	#select application
+	/send 905A000003000101
+	end
+end 
+
+/echo create value file
+# CC = desfire comand creat value file
+# 01= file id
+# access right = EEEE ( LSB first in the apdu)
+# lower limit 00 00 00 00 (LSB first)
+# upper limit D0 07 00 00 (LSB first)
+# value 05 00 00 00 
+
+/send 90CC0000110100EEEE00000000D0070000E803000000
+ 
+/echo send commit
+/send 90C7000000
+
+
+/echo get value
+/send 906c00000101
+
+#/send 90AF0000050102030405
+
+
+# /send 903D00000D01000000100000A0B0C0D0E0102030405000

@@ -1,0 +1,10 @@
+#package specification
+#Tue Mar 19 23:57:47 GMT 2013
+masktools-version=1.1
+myFirst-minor=0
+jcop-packages=myFirst
+myFirst-clazzes=myFirst.MyFirstApplet
+myFirst-base=internal
+myFirst-aid=A000000001
+myFirst.MyFirstApplet-aid=A000000001
+myFirst-major=1

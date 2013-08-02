@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit 'des_client_1.StandardFile.java' to 'StandartFile.java'&#13;&#10;- Original element: 'des_client_1.StandardFile.java'&#13;&#10;- Renamed element: 'des_client_1.StandartFile.java'" description="Rename compilation unit 'StandardFile.java'" flags="589830" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;des_client_1{StandardFile.java" name="StandartFile.java" stamp="1361458817236" version="1.0"/>
+</session>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launchConfiguration type="com.ibm.bluez.jcop.eclipse.launcher">
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.upload/0">
+<mapEntry key="pkgspec" value="pkg://Des_client_2/des_client_2"/>
+</mapAttribute>
+<listAttribute key="com.ibm.bluez.jcop.eclipse.lcc.target/__dir__entries">
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.target"/>
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.target/simulconfig"/>
+</listAttribute>
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.shell/cmdsbefore"/>
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.upload"/>
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.shell">
+<mapEntry key="autoupload" value="true"/>
+</mapAttribute>
+<listAttribute key="com.ibm.bluez.jcop.eclipse.lcc.shell2/__dir__entries">
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.shell2"/>
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.shell2/scriptpath"/>
+</listAttribute>
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.shell/cmdsafter"/>
+<listAttribute key="com.ibm.bluez.jcop.eclipse.lcc.shell/__dir__entries">
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.shell"/>
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.shell/cmdsbefore"/>
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.shell/cmdsafter"/>
+</listAttribute>
+<listAttribute key="com.ibm.bluez.jcop.eclipse.lcc.upload/__dir__entries">
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.upload"/>
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.upload/0"/>
+<listEntry value="com.ibm.bluez.jcop.eclipse.lcc.upload/0/0"/>
+</listAttribute>
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.target">
+<mapEntry key="simul" value="com.ibm.bluez.jcop.eclipse.simulations.njcop"/>
+</mapAttribute>
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.shell2">
+<mapEntry key="clearbuf" value="true"/>
+</mapAttribute>
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.target/simulconfig"/>
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.shell2/scriptpath"/>
+<mapAttribute key="com.ibm.bluez.jcop.eclipse.lcc.upload/0/0">
+<mapEntry key="appspec" value="Des_client_2"/>
+</mapAttribute>
+</launchConfiguration>

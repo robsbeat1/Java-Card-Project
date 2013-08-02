@@ -1,0 +1,10 @@
+#package specification
+#Tue Mar 19 23:57:47 GMT 2013
+wallet-minor=0
+masktools-version=1.1
+wallet.JwalletApplet-aid=A00000ABCD02
+jcop-packages=wallet
+wallet-base=internal
+wallet-aid=A00000ABCD
+wallet-major=1
+wallet-clazzes=wallet.JwalletApplet
