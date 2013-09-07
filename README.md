@@ -1,4 +1,3 @@
 Java-Card-Project
 =================
-
-Implementation of Master's thesis work
+This repository contains the source code for my master's thesis proof of concept
